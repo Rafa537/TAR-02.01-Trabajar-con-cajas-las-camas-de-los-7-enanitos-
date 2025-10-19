@@ -1,0 +1,71 @@
+body{
+    border: 10px;
+    width: 1260px;
+    height: 780px;
+}
+
+.alturaCajas {
+    float: left;
+    width: 100px; /* necesario para que float funcione correctamente */
+    height: 50px;
+    border: 2px solid;    /* Borde para simular el borde del colchón */
+    padding: 2px 10px;          /* 2px arriba/abajo, 10px izquierda/derecha */
+    margin: 40px 20px;          /* 40px arriba/abajo, 20px izquierda/derecha */
+}
+
+.alturaCajas:first-of-type {
+    float: none;
+}
+
+.grunon {
+    position: absolute;  /* relativo al div.habitacion */
+    right: 20px;         /* 20px de la pared derecha */
+    top: 150px;          /* x px desde la pared superior (aprox. centrado verticalmente) */
+}
+
+/* Contenedor de referencia */
+.habitacion {
+    position: relative;    /* referencia para Gruñón */
+    width: 800px;          /* ancho de la habitación */
+    height: auto;         /* altura de la habitación */
+    border: 2px solid #333;
+    margin: 20px auto;
+    background-color: #fff8dc;
+    padding: 10px;
+    overflow: hidden; /* fuerza a que las cajas estén dentro de su caja contenedora */
+}
+
+label {
+    float: left;
+    width: 100px;
+    border: 2px solid;
+}
+
+label, .alturaCajas {
+    float: right;
+}
+
+.capa{
+    position: absolute;      /* para colocar la capa sobre la cama */
+    top: 0;                  /* ajusta según posición de la cama */
+    left: 0;                 /* ajusta según posición de la cama */
+    width: 120px;
+    height: 55px;
+    background-color: #333;
+}
+
+#timido{
+    position: relative;
+}
+
+label::first-letter, .alturaCajas::first-letter{
+    color: blue;
+}
+
+.habitacion .alturaCajas:nth-child(even) {
+    background-color: #F1FEE3;
+}
+
+.habitacion label.grunon {
+    background-color: #D6234A;
+}
