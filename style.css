@@ -46,16 +46,17 @@ label, .alturaCajas {
 }
 
 .capa{
-    position: absolute;      /* para colocar la capa sobre la cama */
-    top: 0;                  /* ajusta según posición de la cama */
-    left: 0;                 /* ajusta según posición de la cama */
-    width: 120px;
-    height: 55px;
-    background-color: #333;
+    position: absolute; /* para colocar la capa sobre la cama */
+    top: 0;                  
+    left: 0;                 
+    width: 150px;
+    height: 60px;
+    background-color: #fff8dc;
 }
 
 #timido{
     position: relative;
+    z-index: -1;
 }
 
 label::first-letter, .alturaCajas::first-letter{
@@ -69,3 +70,4 @@ label::first-letter, .alturaCajas::first-letter{
 .habitacion label.grunon {
     background-color: #D6234A;
 }
+
