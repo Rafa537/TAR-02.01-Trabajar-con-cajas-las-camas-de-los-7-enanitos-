@@ -4,6 +4,81 @@ body{
     height: 780px;
 }
 
+/* Contenedor de referencia */
+.habitacion {
+    position: relative;    /* referencia para Gruñón */
+    width: 800px;          /* ancho de la habitación */
+    height: auto;         /* altura de la habitación */
+    border: 2px solid #333;
+    background-color: #fff8dc;
+    padding: 10px;
+    overflow: hidden; /* fuerza a que las cajas estén dentro de su caja contenedora */
+}
+
+
+
+/* Tamaño de las cajas de los divs */
+#div
+{
+    border: 2px solid black;
+    width: auto;
+    height: 120px;
+    overflow: hidden;
+}
+
+.alturaCajas{
+    display: inline-block;
+    width: auto;
+    height: auto;
+    border: 2px solid;
+    padding: 2px 10px;
+    margin: 40px 20px;
+    float: none;
+}
+
+label {
+    float: left;
+    width: 100px;
+    border: 2px solid;
+}
+
+
+label, .alturaCajas {
+    float: right;
+}
+
+
+.capa{
+    position: absolute; /* para colocar la capa sobre la cama */
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 60px;
+    background-color: #fff8dc;
+}
+
+
+#timido{
+    position: relative;
+    z-index: -1;
+}
+
+
+label::first-letter, .alturaCajas::first-letter{
+    color: blue;
+}
+
+
+.habitacion .alturaCajas:nth-child(even) {
+    background-color: #F1FEE3;
+}
+
+
+.habitacion label.grunon {
+    background-color: #D6234A;
+}
+
+
 .alturaCajas {
     float: left;
     width: 100px; /* necesario para que float funcione correctamente */
@@ -13,61 +88,14 @@ body{
     margin: 40px 20px;          /* 40px arriba/abajo, 20px izquierda/derecha */
 }
 
+
 .alturaCajas:first-of-type {
     float: none;
 }
 
+
 .grunon {
     position: absolute;  /* relativo al div.habitacion */
     right: 20px;         /* 20px de la pared derecha */
-    top: 150px;          /* x px desde la pared superior (aprox. centrado verticalmente) */
+    top: 150px;          /* x px desde la pared superior */
 }
-
-/* Contenedor de referencia */
-.habitacion {
-    position: relative;    /* referencia para Gruñón */
-    width: 800px;          /* ancho de la habitación */
-    height: auto;         /* altura de la habitación */
-    border: 2px solid #333;
-    margin: 20px auto;
-    background-color: #fff8dc;
-    padding: 10px;
-    overflow: hidden; /* fuerza a que las cajas estén dentro de su caja contenedora */
-}
-
-label {
-    float: left;
-    width: 100px;
-    border: 2px solid;
-}
-
-label, .alturaCajas {
-    float: right;
-}
-
-.capa{
-    position: absolute; /* para colocar la capa sobre la cama */
-    top: 0;                  
-    left: 0;                 
-    width: 150px;
-    height: 60px;
-    background-color: #fff8dc;
-}
-
-#timido{
-    position: relative;
-    z-index: -1;
-}
-
-label::first-letter, .alturaCajas::first-letter{
-    color: blue;
-}
-
-.habitacion .alturaCajas:nth-child(even) {
-    background-color: #F1FEE3;
-}
-
-.habitacion label.grunon {
-    background-color: #D6234A;
-}
-
